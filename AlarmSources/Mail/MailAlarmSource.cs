@@ -14,10 +14,8 @@
 // along with AlarmWorkflow.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Mail;
 using System.Text;
 using System.Threading;
 using AlarmWorkflow.AlarmSource.Mail.Properties;
@@ -47,6 +45,7 @@ namespace AlarmWorkflow.AlarmSource.Mail
 
         private IServiceProvider _serviceProvider;
         private MailConfiguration _configuration;
+        private DirectoryInfo _attPath;
 
         private IParser _mailParser;
 
@@ -77,6 +76,14 @@ namespace AlarmWorkflow.AlarmSource.Mail
             _configuration = new MailConfiguration(serviceProvider);
 
             _mailParser = ExportedTypeLibrary.Import<IParser>(_configuration.ParserAlias);
+
+            //_attPath = new DirectoryInfo(_configuration.AttachmentPath);
+
+            //if (!_attPath.Exists)
+            //{
+            //    _attPath.Create();
+            //    //Logger.Instance.LogFormat(LogType.Trace, this, Properties.Resources.CreatedRequiredDirectory, _attPath.FullName);
+            //}
         }
 
         void IAlarmSource.RunThread()
@@ -171,10 +178,14 @@ namespace AlarmWorkflow.AlarmSource.Mail
         }
 
         private string[] AnalyzeAttachment(MimeMessage message)
-        { 
-            MimeEntity attachment = message.Attachments.FirstOrDefault(att => string.Equals(((MimePart) att).FileName, _configuration.AttachmentName, StringComparison.InvariantCultureIgnoreCase));
+        {
+            MimeEntity attachment = message.Attachments.FirstOrDefault(att => string.Equals(((MimePart)att).FileName, _configuration.AttachmentName, StringComparison.InvariantCultureIgnoreCase));
+            //MimeEntity attachment = message.Attachments.FirstOrDefault(att => ((MimePart)att).FileName.EndsWith(".pdf", StringComparison.InvariantCultureIgnoreCase));
             if (attachment != null)
             {
+                //attachment.WriteTo(Path.Combine(_attPath.FullName, ((MimePart)attachment).FileName));
+                //Logger.Instance.LogFormat(LogType.Info, this, "Write attachment to: {0} , {1}", _attPath.FullName, ((MimePart)attachment).FileName);
+
                 return GetLinesFromAttachment(attachment);
             }
 

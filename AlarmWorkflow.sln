@@ -155,6 +155,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parsers.Test", "Parsers\Par
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Divera", "Jobs\Engine\Divera\Divera.csproj", "{119BB0EA-8565-456E-A4E9-6B7DCFCDDB39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserFuldaTest", "Parsers\ParserFuldaTest\ParserFuldaTest.csproj", "{83272502-3E60-4607-863C-6BB097B42C81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -397,6 +399,10 @@ Global
 		{119BB0EA-8565-456E-A4E9-6B7DCFCDDB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{119BB0EA-8565-456E-A4E9-6B7DCFCDDB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{119BB0EA-8565-456E-A4E9-6B7DCFCDDB39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83272502-3E60-4607-863C-6BB097B42C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83272502-3E60-4607-863C-6BB097B42C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83272502-3E60-4607-863C-6BB097B42C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83272502-3E60-4607-863C-6BB097B42C81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -465,6 +471,7 @@ Global
 		{CB275133-F6E8-4941-97A9-904806A7D0E9} = {1154C351-1295-497D-B300-7A730E35E440}
 		{469BB856-FA56-457D-AC00-40F0766EBF1B} = {1154C351-1295-497D-B300-7A730E35E440}
 		{119BB0EA-8565-456E-A4E9-6B7DCFCDDB39} = {F1FDC9F3-3E6C-4610-A2CC-92E5D90E6B93}
+		{83272502-3E60-4607-863C-6BB097B42C81} = {1154C351-1295-497D-B300-7A730E35E440}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18F760F3-95E3-4202-BFFD-65A8E7EF9129}

@@ -33,6 +33,8 @@ namespace AlarmWorkflow.AlarmSource.Mail
 
         #region Properties
 
+        //internal string AttachmentPath => _settings.GetSetting("MailAlarmSource", "AttachmentPath").GetValue<string>();
+
         internal string ServerName => _settings.GetSetting("MailAlarmSource", "ServerName").GetValue<string>();
 
         internal int Port => _settings.GetSetting("MailAlarmSource", "Port").GetValue<int>();
