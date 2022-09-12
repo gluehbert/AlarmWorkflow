@@ -198,7 +198,8 @@ namespace AlarmWorkflow.AlarmSource.Mail
             byte[] buffer;
             using (MemoryStream stream = new MemoryStream())
             {
-                ((MimePart) attachment).ContentObject.DecodeTo(stream);
+                ((MimePart) attachment).Content.DecodeTo(stream);
+    
                 buffer = stream.GetBuffer();
             }
 
