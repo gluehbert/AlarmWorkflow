@@ -235,7 +235,7 @@ namespace AlarmWorkflow.Backend.ServiceContracts.Communication
             Assertions.AssertNotNull(callbackObject, "callbackObject");
 
             Binding binding = ServiceBindingCache.GetBindingForContractType(typeof(T));
-            DuplexChannelFactory<T> factory = new DuplexChannelFactory<T>(callbackObject, binding, GetEndpointAddress(typeof(T), binding));
+            DuplexChannelFactory<T> factory = new DuplexChannelFactory<T>(callbackObject as InstanceContext, binding, GetEndpointAddress(typeof(T), binding));
 
             ApplyX509IfConfigured(factory);
 

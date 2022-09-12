@@ -13,8 +13,8 @@
 // You should have received a copy of the GNU General Public License
 // along with AlarmWorkflow.  If not, see <http://www.gnu.org/licenses/>.
 
+using CoreWCF;
 using System;
-using System.ServiceModel;
 
 namespace AlarmWorkflow.Backend.ServiceContracts.Core
 {

@@ -13,6 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with AlarmWorkflow.  If not, see <http://www.gnu.org/licenses/>.
 
+using CoreWCF.IdentityModel.Tokens;
 using System.IdentityModel.Selectors;
 using System.IdentityModel.Tokens;
 using System.Security.Cryptography.X509Certificates;

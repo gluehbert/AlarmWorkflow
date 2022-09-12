@@ -14,8 +14,8 @@
 // along with AlarmWorkflow.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.ServiceModel;
 using AlarmWorkflow.Shared.Core;
+using CoreWCF;
 
 namespace AlarmWorkflow.Backend.ServiceContracts.Core
 {
@@ -23,7 +23,7 @@ namespace AlarmWorkflow.Backend.ServiceContracts.Core
     /// Provides the base implementation for a service running at the backend and exposed over WCF.
     /// </summary>
 #if DEBUG
-    [ServiceBehavior(UseSynchronizationContext = false, ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerSession, IncludeExceptionDetailInFaults = true)]
+    [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerSession, IncludeExceptionDetailInFaults = true)]
 #else
     [ServiceBehavior(UseSynchronizationContext = false, ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerSession)]
 #endif

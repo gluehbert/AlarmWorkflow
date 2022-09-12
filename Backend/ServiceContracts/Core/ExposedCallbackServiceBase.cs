@@ -14,9 +14,9 @@
 // along with AlarmWorkflow.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.ServiceModel;
 using AlarmWorkflow.Shared.Core;
 using AlarmWorkflow.Shared.Diagnostics;
+using CoreWCF;
 
 namespace AlarmWorkflow.Backend.ServiceContracts.Core
 {
