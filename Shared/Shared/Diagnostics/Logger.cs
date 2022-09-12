@@ -204,7 +204,7 @@ namespace AlarmWorkflow.Shared.Diagnostics
                 appenders.Add(CreateConsoleAppender(logName));
                 appenders.Add(CreateTraceAppender(logName));
                 appenders.Add(CreateFileAppender(logName));
-                appenders.Add(CreateEventLogAppender(logName));
+                //appenders.Add(CreateEventLogAppender(logName));
 
                 foreach (IOptionHandler handler in appenders.OfType<IOptionHandler>())
                 {
@@ -255,14 +255,14 @@ namespace AlarmWorkflow.Shared.Diagnostics
                 return appender;
             }
 
-            private static IAppender CreateEventLogAppender(string logName)
-            {
-                EventLogAppender appender = new EventLogAppender();
-                appender.Layout = CreateOnlyMessageLayout();
-                appender.ApplicationName = "AlarmWorkflow/" + logName;
+            //private static IAppender CreateEventLogAppender(string logName)
+            //{
+            //    EventLogAppender appender = new EventLogAppender();
+            //    appender.Layout = CreateOnlyMessageLayout();
+            //    appender.ApplicationName = "AlarmWorkflow/" + logName;
 
-                return appender;
-            }
+            //    return appender;
+            //}
 
             private static ILayout CreateTraceLayout()
             {
