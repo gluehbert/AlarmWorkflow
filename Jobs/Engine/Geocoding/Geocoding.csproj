@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>AlarmWorkflow.Job.Geocoding</RootNamespace>
     <AssemblyName>AlarmWorkflow.Job.Geocoding</AssemblyName>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyTitle>AlarmWorkflow.Job.Geocoding</AssemblyTitle>
     <Company>The AlarmWorkflow-Team</Company>
     <Product>AlarmWorkflow.Job.Geocoding</Product>
@@ -17,10 +17,9 @@
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.Web" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-  <ProjectReference Include="..\..\..\Shared\Shared\Shared.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Shared\Shared.csproj" />
     <ProjectReference Include="..\..\..\Backend\ServiceContracts\ServiceContracts.csproj" />
     <ProjectReference Include="..\..\..\BackendServices\EngineContracts\EngineContracts.csproj" />
     <ProjectReference Include="..\..\..\BackendServices\SettingsContracts\SettingsContracts.csproj" />
@@ -30,5 +29,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="settings.info.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 </Project>

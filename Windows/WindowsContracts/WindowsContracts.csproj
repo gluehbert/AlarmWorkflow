@@ -3,34 +3,41 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>AlarmWorkflow.Windows.UIContracts</RootNamespace>
     <AssemblyName>AlarmWorkflow.Windows.UIContracts</AssemblyName>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <AssemblyTitle>AlarmWorkflow.Windows.UIContracts</AssemblyTitle>
     <Company>The AlarmWorkflow-Team</Company>
     <Product>AlarmWorkflow.Windows.UIContracts</Product>
-    <Copyright>Copyright &#169;  2012</Copyright>
+    <Copyright>Copyright ©  2012</Copyright>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
     <OutputPath>..\..\Build\</OutputPath>
     <DocumentationFile>..\..\Build\AlarmWorkflow.Windows.UIContracts.XML</DocumentationFile>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>full</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PresentationCore"/>
-    <Reference Include="PresentationFramework"/>
-    <Reference Include="System.Xaml"/>
-    <Reference Include="Microsoft.CSharp"/>
-    <Reference Include="WindowsBase"/>
-  <ProjectReference Include="..\..\Shared\Shared\Shared.csproj"/></ItemGroup>
+    <Reference Include="System.Xaml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="WindowsBase" />
+    <ProjectReference Include="..\..\Shared\Shared\Shared.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.346202">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="6.0.0" />
   </ItemGroup>
 </Project>

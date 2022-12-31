@@ -3,7 +3,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>AlarmWorkflow.Windows.UIWidgets.Browser</RootNamespace>
     <AssemblyName>AlarmWorkflow.Windows.UIWidgets.Browser</AssemblyName>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <AssemblyTitle>AlarmWorkflow.Windows.UIWidgets.Browser</AssemblyTitle>
     <Company>The AlarmWorkflow-Team</Company>
     <Product>AlarmWorkflow.Windows.UIWidgets.Browser</Product>
@@ -22,7 +22,11 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System.Xaml" />
-    <Reference Include="WindowsBase" /><ProjectReference Include="..\..\Backend\ServiceContracts\ServiceContracts.csproj" /><ProjectReference Include="..\..\BackendServices\SettingsContracts\SettingsContracts.csproj" /><ProjectReference Include="..\..\Windows\CustomViewer\CustomViewer.csproj" /></ItemGroup>
+    <Reference Include="WindowsBase" />
+    <ProjectReference Include="..\..\Backend\ServiceContracts\ServiceContracts.csproj" />
+    <ProjectReference Include="..\..\BackendServices\SettingsContracts\SettingsContracts.csproj" />
+    <ProjectReference Include="..\..\Windows\CustomViewer\CustomViewer.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Update="BrowserWidget.xaml.cs">
       <DependentUpon>BrowserWidget.xaml</DependentUpon>

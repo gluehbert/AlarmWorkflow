@@ -3,7 +3,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>AlarmWorkflow.Windows.Configuration.AddressBookEditor</RootNamespace>
     <AssemblyName>AlarmWorkflow.Windows.Configuration.AddressBookEditor</AssemblyName>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <AssemblyTitle>AlarmWorkflow.Windows.Configuration.AddressBookEditor</AssemblyTitle>
     <Company>The AlarmWorkflow-Team</Company>
     <Product>AlarmWorkflow.Windows.Configuration.AddressBookEditor</Product>
@@ -23,7 +23,11 @@
     <Reference Include="System.Xaml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="WindowsBase" />
-  <ProjectReference Include="..\..\Shared\Shared\Shared.csproj" /><ProjectReference Include="..\..\Backend\ServiceContracts\ServiceContracts.csproj" /><ProjectReference Include="..\..\BackendServices\AddressingContracts\AddressingContracts.csproj" /><ProjectReference Include="..\..\Windows\WindowsContracts\WindowsContracts.csproj" /></ItemGroup>
+    <ProjectReference Include="..\..\Shared\Shared\Shared.csproj" />
+    <ProjectReference Include="..\..\Backend\ServiceContracts\ServiceContracts.csproj" />
+    <ProjectReference Include="..\..\BackendServices\AddressingContracts\AddressingContracts.csproj" />
+    <ProjectReference Include="..\..\Windows\WindowsContracts\WindowsContracts.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConfigurationContracts\ConfigurationContracts.csproj" />
   </ItemGroup>

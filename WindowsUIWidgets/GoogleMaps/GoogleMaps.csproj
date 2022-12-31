@@ -1,9 +1,9 @@
-<Project Sdk="MSBuild.Sdk.Extras/1.6.47">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>AlarmWorkflow.Windows.UIWidgets.GoogleMaps</RootNamespace>
     <AssemblyName>AlarmWorkflow.Windows.UIWidgets.GoogleMaps</AssemblyName>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <AssemblyTitle>AlarmWorkflow.Windows.UIWidget.GoogleMaps</AssemblyTitle>
     <Company>The AlarmWorkflow-Team</Company>
@@ -26,7 +26,11 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-  <ProjectReference Include="..\..\Shared\Shared\Shared.csproj" /><ProjectReference Include="..\..\Backend\ServiceContracts\ServiceContracts.csproj" /><ProjectReference Include="..\..\BackendServices\SettingsContracts\SettingsContracts.csproj" /><ProjectReference Include="..\..\Windows\CustomViewer\CustomViewer.csproj" /></ItemGroup>
+    <ProjectReference Include="..\..\Shared\Shared\Shared.csproj" />
+    <ProjectReference Include="..\..\Backend\ServiceContracts\ServiceContracts.csproj" />
+    <ProjectReference Include="..\..\BackendServices\SettingsContracts\SettingsContracts.csproj" />
+    <ProjectReference Include="..\..\Windows\CustomViewer\CustomViewer.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="settings.info.xml" />
     <EmbeddedResource Include="settings.xml">

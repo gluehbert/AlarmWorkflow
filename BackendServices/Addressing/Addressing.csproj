@@ -3,7 +3,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>AlarmWorkflow.BackendService.Addressing</RootNamespace>
     <AssemblyName>AlarmWorkflow.BackendService.Addressing</AssemblyName>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>AlarmWorkflow.BackendService.Addressing</AssemblyTitle>
     <Company>The AlarmWorkflow-Team</Company>
     <Product>AlarmWorkflow.BackendService.Addressing</Product>
@@ -18,9 +18,10 @@
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.ServiceModel"/>
-    <Reference Include="Microsoft.CSharp"/>
-  <ProjectReference Include="..\..\Backend\ServiceContracts\ServiceContracts.csproj"/><ProjectReference Include="..\..\Shared\Shared\Shared.csproj"/></ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <ProjectReference Include="..\..\Backend\ServiceContracts\ServiceContracts.csproj" />
+    <ProjectReference Include="..\..\Shared\Shared\Shared.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -29,11 +30,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AddressingContracts\AddressingContracts.csproj"/>
-    <ProjectReference Include="..\SettingsContracts\SettingsContracts.csproj"/>
+    <ProjectReference Include="..\AddressingContracts\AddressingContracts.csproj" />
+    <ProjectReference Include="..\SettingsContracts\SettingsContracts.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="settings.info.xml"/>
-    <EmbeddedResource Include="settings.xml"/>
+    <EmbeddedResource Include="settings.info.xml" />
+    <EmbeddedResource Include="settings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.346201">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 </Project>

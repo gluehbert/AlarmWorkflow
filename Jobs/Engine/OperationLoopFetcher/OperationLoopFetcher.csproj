@@ -3,7 +3,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>AlarmWorkflow.Job.OperationLoopFetcher</RootNamespace>
     <AssemblyName>AlarmWorkflow.Job.OperationLoopFetcher</AssemblyName>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>AlarmWorkflow.Job.OperationLoopFetcher</AssemblyTitle>
     <Company>The AlarmWorkflow-Team</Company>
     <Product>AlarmWorkflow.Job.OperationLoopFetcher</Product>
@@ -19,7 +19,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <ProjectReference Include="..\..\..\Shared\Shared\Shared.csproj" /><ProjectReference Include="..\..\..\Backend\ServiceContracts\ServiceContracts.csproj" /><ProjectReference Include="..\..\..\BackendServices\EngineContracts\EngineContracts.csproj" /><ProjectReference Include="..\..\..\BackendServices\SettingsContracts\SettingsContracts.csproj" /></ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Shared\Shared.csproj" />
+    <ProjectReference Include="..\..\..\Backend\ServiceContracts\ServiceContracts.csproj" />
+    <ProjectReference Include="..\..\..\BackendServices\EngineContracts\EngineContracts.csproj" />
+    <ProjectReference Include="..\..\..\BackendServices\SettingsContracts\SettingsContracts.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

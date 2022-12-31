@@ -1,9 +1,9 @@
-<Project Sdk="MSBuild.Sdk.Extras/1.6.47">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <RootNamespace>AlarmWorkflow.Tools.Dispatching</RootNamespace>
     <AssemblyName>AlarmWorkflow.Tools.Dispatching</AssemblyName>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <AssemblyTitle>AlarmWorkflow.Tools.Dispatching</AssemblyTitle>
     <Company>The AlarmWorkflow-Team</Company>
@@ -23,20 +23,25 @@
     <ApplicationIcon>logo_32.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xaml" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <ProjectReference Include="..\..\BackendServices\DispositioningContracts\DispositioningContracts.csproj" />
     <ProjectReference Include="..\..\BackendServices\ManagementContracts\ManagementContracts.csproj" />
-  <ProjectReference Include="..\..\Backend\ServiceContracts\ServiceContracts.csproj" />
-  <ProjectReference Include="..\..\Shared\Shared\Shared.csproj" />
-  <ProjectReference Include="..\..\Windows\WindowsContracts\WindowsContracts.csproj" /></ItemGroup>
+    <ProjectReference Include="..\..\Backend\ServiceContracts\ServiceContracts.csproj" />
+    <ProjectReference Include="..\..\Shared\Shared\Shared.csproj" />
+    <ProjectReference Include="..\..\Windows\WindowsContracts\WindowsContracts.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="logo_32.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="logo_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.8.1" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.1" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="4.8.1" />
   </ItemGroup>
 </Project>

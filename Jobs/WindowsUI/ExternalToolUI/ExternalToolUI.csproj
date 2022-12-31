@@ -3,7 +3,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>AlarmWorkflow.Windows.ExternalToolUIJob</RootNamespace>
     <AssemblyName>AlarmWorkflow.Windows.ExternalToolUIJob</AssemblyName>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <AssemblyTitle>AlarmWorkflow.Windows.ExternalToolUIJob</AssemblyTitle>
     <Company>The AlarmWorkflow-Team</Company>
     <Product>AlarmWorkflow.Windows.ExternalToolUIJob</Product>
@@ -19,7 +19,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-  <ProjectReference Include="..\..\..\Shared\Shared\Shared.csproj" /><ProjectReference Include="..\..\..\Backend\ServiceContracts\ServiceContracts.csproj" /><ProjectReference Include="..\..\..\BackendServices\SettingsContracts\SettingsContracts.csproj" /><ProjectReference Include="..\..\..\Windows\WindowsContracts\WindowsContracts.csproj" /></ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Shared\Shared.csproj" />
+    <ProjectReference Include="..\..\..\Backend\ServiceContracts\ServiceContracts.csproj" />
+    <ProjectReference Include="..\..\..\BackendServices\SettingsContracts\SettingsContracts.csproj" />
+    <ProjectReference Include="..\..\..\Windows\WindowsContracts\WindowsContracts.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

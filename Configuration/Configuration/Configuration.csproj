@@ -1,10 +1,10 @@
-<Project Sdk="MSBuild.Sdk.Extras/1.6.47">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProductVersion>8.0.30703</ProductVersion>
     <OutputType>WinExe</OutputType>
     <RootNamespace>AlarmWorkflow.Windows.Configuration</RootNamespace>
     <AssemblyName>AlarmWorkflow.Windows.Configuration</AssemblyName>
-    <TargetFramework>net47</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <AssemblyTitle>AlarmWorkflow.Windows.Configuration</AssemblyTitle>
     <Company>The AlarmWorkflow-Team</Company>
@@ -24,18 +24,11 @@
   <PropertyGroup>
     <ApplicationIcon>Configuration.ico</ApplicationIcon>
   </PropertyGroup>
-  <PropertyGroup />
-  <ItemGroup>
-    <Reference Include="System.Configuration.Install" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceProcess" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-  </ItemGroup>
+  <PropertyGroup>
+    <UseWindowsForms>False</UseWindowsForms>
+    <UseWPF>True</UseWPF>
+    <StartupObject>AlarmWorkflow.Windows.Configuration.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="Resources\ObjectTestDatabase.xsd">
       <SubType>Designer</SubType>
@@ -50,7 +43,6 @@
     <ProjectReference Include="..\..\BackendServices\SettingsContracts\SettingsContracts.csproj" />
     <ProjectReference Include="..\..\Backend\ServiceContracts\ServiceContracts.csproj" />
     <ProjectReference Include="..\..\Shared\Shared\Shared.csproj" />
-    <ProjectReference Include="..\..\Windows\WindowsContracts\WindowsContracts.csproj" />
     <ProjectReference Include="..\ConfigurationContracts\ConfigurationContracts.csproj" />
   </ItemGroup>
   <ItemGroup>
@@ -86,5 +78,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\dynamicsetting_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CoreWCF.NetTcp" Version="1.1.0" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.10.0" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.10.0" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="4.10.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.346201">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 </Project>

@@ -21,7 +21,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using System.Text;
-using System.Web;
 using AlarmWorkflow.Shared.Diagnostics;
 
 namespace AlarmWorkflow.Job.PushJob
